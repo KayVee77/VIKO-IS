@@ -1,0 +1,35 @@
+﻿<Window x:Class="projektas.LoggedInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:projektas"
+        mc:Ignorable="d"
+        Title="LoggedInWindow" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Button Style -->
+        <Style x:Key="StylishButton" TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#005DA2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF1F96FF">
+        <Label Content="Pasirinkite semestrą" HorizontalAlignment="Left" Margin="348,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.047,0.501" Height="66" Width="368" FontSize="36" FontWeight="Bold"/>
+        <Image Source="images/ViKoLogo.jpg" Margin="61,42,606,247"/>
+        <Button Name ="FSemesterbtn" Content="Pirmas semestras"  Style="{StaticResource StylishButton}" HorizontalAlignment="Left" Margin="360,131,0,0" VerticalAlignment="Top" Height="50" Width="356" Click="FSemesterbtn_Click"/>
+        <Button Name ="SSemesterbtn" Content="Antras semestras"  Style="{StaticResource StylishButton}" HorizontalAlignment="Left" Margin="360,207,0,0" VerticalAlignment="Top" Height="50" Width="356" Click="SSemesterbtn_Click"/>
+        <Button Name ="TSemesterbtn" Content="Trečias semestras"  Style="{StaticResource StylishButton}" HorizontalAlignment="Left" Margin="360,279,0,0" VerticalAlignment="Top" Height="50" Width="356" Click="TSemesterbtn_Click"/>
+        <Button Name ="LogOutbtn" Content="Atsijungti"  Style="{StaticResource StylishButton}" HorizontalAlignment="Left" Margin="683,10,0,0" VerticalAlignment="Top" Height="50" Width="107" Click="LogOutbtn_Click"/>
+    </Grid>
+</Window>
